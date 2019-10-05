@@ -24,13 +24,13 @@ namespace Platformer
 
         public override void OnAddedToEntity()
         {
-            var texture = Entity.Scene.Content.LoadSpriteAtlas("Content/Assets/Player.atlas");
+            var texture = Entity.Scene.Content.LoadSpriteAtlas("Content/Assets/Player/Player.atlas");
 
             _boxCollider = Entity.GetComponent<BoxCollider>();
             _mover = Entity.GetComponent<TiledMapMover>();
             _animator = Entity.AddComponent(new SpriteAnimator()) ;
             _animator.AddAnimationsFromAtlas(texture);
-            _animator.Speed = 1;
+            _animator.Speed = 0.7f;
             _animator.Play("idle");
             SetupInput();
         }
@@ -83,9 +83,8 @@ namespace Platformer
                     animation = "idle";
             }
 
-            if (_collisionState.Above)
+            if(_collisionState.Above)
             {
-                animation = "fall";
                 _velocity.Y = 0;
             }
 

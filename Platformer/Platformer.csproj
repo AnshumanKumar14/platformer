@@ -55,6 +55,7 @@
     <Reference Include="MonoGame.Framework">
       <HintPath>$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\MonoGame.Framework.dll</HintPath>
     </Reference>
+    <Reference Include="netstandard" />
     <Reference Include="System" />
     <Reference Include="System.Xml" />
   </ItemGroup>
@@ -110,7 +111,7 @@
     </None>
     <None Include="app.config" />
     <None Include="app.manifest" />
-    <None Include="Content\Assets\Player.atlas">
+    <None Include="Content\Assets\Player\Player.atlas">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="Content\Levels\level1.tmx">
@@ -123,9 +124,11 @@
       <Name>Nez</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Content Include="Content\Assets\Player.png">
+    <Folder Include="Managers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Assets\Player\Player.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\Levels\cavesofgallet_tiles.png">

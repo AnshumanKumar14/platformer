@@ -9,6 +9,7 @@ namespace Platformer
     {
         public Game1()
         {
+            IsFixedTimeStep = false;
         }
 
         protected override void Initialize()
@@ -16,7 +17,7 @@ namespace Platformer
             base.Initialize();
             var scene = new BaseScene();
             scene.SetDesignResolution(640, 360, Scene.SceneResolutionPolicy.ShowAllPixelPerfect);
-            Screen.SetSize(640 * 2, 360 * 2);
+            Screen.SetSize(640 * 3, 360 * 3);
             Scene = scene;
         }
     }

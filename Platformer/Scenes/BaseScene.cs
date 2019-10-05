@@ -10,8 +10,6 @@ namespace Platformer
 
         public override void Initialize()
         {
-            /*SetDesignResolution(640, 360, SceneResolutionPolicy.ShowAllPixelPerfect);
-            Screen.SetSize(640 * 2, 480 * 2);*/
 
             var map = Content.LoadTiledMap("Content/Levels/level1.tmx");
             var spawnObject = map.GetObjectGroup("objects").Objects["spawn"];
@@ -33,7 +31,7 @@ namespace Platformer
             playerEntity.AddComponent(new BoxCollider(-8, -6, 16, 16));
             playerEntity.AddComponent(new TiledMapMover(map.GetLayer<TmxLayer>("ground")));
 
-            Camera.Zoom = 0.4f;
+            Camera.Zoom = 0.04f;
             Camera.Entity.AddComponent(new FollowCamera(playerEntity));
         }
     }
