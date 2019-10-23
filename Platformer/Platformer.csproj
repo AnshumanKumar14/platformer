@@ -119,12 +119,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\..\Libraries\Nez-master\Nez.Portable\Nez.csproj">
-      <Project>{42db74c6-e7f4-4315-904d-d04bfcc45344}</Project>
-      <Name>Nez</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="Managers\" />
   </ItemGroup>
   <ItemGroup>
@@ -134,6 +128,12 @@
     <Content Include="Content\Levels\cavesofgallet_tiles.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Desktop\Nez-master\Nez.Portable\Nez.csproj">
+      <Project>{60dd542b-9b9c-4062-a652-88129daebf97}</Project>
+      <Name>Nez</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />

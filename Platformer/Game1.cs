@@ -17,7 +17,7 @@ namespace Platformer
             base.Initialize();
             var scene = new BaseScene();
             scene.SetDesignResolution(640, 360, Scene.SceneResolutionPolicy.ShowAllPixelPerfect);
-            Screen.SetSize(640 * 3, 360 * 3);
+            Screen.SetSize(640 * 2, 360 * 2);
             Scene = scene;
         }
     }
