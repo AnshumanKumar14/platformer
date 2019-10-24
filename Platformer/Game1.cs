@@ -15,7 +15,7 @@ namespace Platformer
         protected override void Initialize()
         {
             base.Initialize();
-            var scene = new BaseScene();
+            var scene = new Menu();
             scene.SetDesignResolution(640, 360, Scene.SceneResolutionPolicy.ShowAllPixelPerfect);
             Screen.SetSize(640 * 2, 360 * 2);
             Scene = scene;
