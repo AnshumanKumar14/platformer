@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Platformer
 {
-    class Test: UICanvas
+    class MenuItem: UICanvas
     {
 /*        public override RectangleF Bounds => new RectangleF(0, 0, 200, 200);
 */        public override void Initialize()
@@ -19,27 +19,22 @@ namespace Platformer
             table.SetFillParent(true).Center();
 
             // add a button for each of the actions/AI types we need
-            table.Add(new TextButton("Continue", skin))
-                .GetElement<TextButton>()
-                .OnClicked += OnClickBtLowerPriority;
-            table.Row();
-
-            table.Add(new TextButton("New game", skin))
+            table.Add(new TextButton(Constants.MENU_PLAY, skin))
                 .GetElement<TextButton>()
                 .OnClicked += LoadGame;
             table.Row();
 
-            table.Add(new TextButton("Settings", skin))
+            table.Add(new TextButton(Constants.MENU_OPTION, skin))
                 .GetElement<TextButton>()
                 .OnClicked += OnClickBtLowerPriority;
             table.Row();
 
-            table.Add(new TextButton("Credits", skin))
+            table.Add(new TextButton(Constants.MENU_CREDITS, skin))
                 .GetElement<TextButton>()
                 .OnClicked += OnClickBtLowerPriority;
             table.Row();
 
-            table.Add(new TextButton("Quit game", skin))
+            table.Add(new TextButton(Constants.MENU_EXIT, skin))
                .GetElement<TextButton>()
                .OnClicked += OnClickBtLowerPriority;
             table.Row();
@@ -52,10 +47,7 @@ namespace Platformer
 
         void LoadGame(Button butt)
         {
-            var scene = new BaseScene();
-            scene.SetDesignResolution(640, 360, Scene.SceneResolutionPolicy.ShowAllPixelPerfect);
-            Screen.SetSize(640 * 2, 360 * 2);
-            Core.Scene = scene;
+            Game.ManagerState.SetState(StateType.LoadLevel, true);
         }
     }
 }

@@ -28,8 +28,8 @@ namespace Platformer
             var tiledEntity = CreateEntity("level-1");
             var tiledMapRenderer = tiledEntity.AddComponent(new TiledMapRenderer(map, "ground"));
             tiledMapRenderer.SetLayersToRender(new[] { "background", "ground", "water", "decorations" });
-            CreateEntity("test")
-                 .AddComponent<Test>();
+            CreateEntity("menu")
+                 .AddComponent<MenuItem>();
         }
     }
 }

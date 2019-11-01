@@ -17,13 +17,10 @@ namespace Platformer
             var tiledMapRenderer = tiledEntity.AddComponent(new TiledMapRenderer(map, "ground"));
             tiledMapRenderer.SetLayersToRender(new[] { "background", "ground", "water", "decorations" });
 
-
-            #region Camera
             var topLeft = new Vector2(map.TileWidth, map.TileWidth);
             var bottomRight = new Vector2(map.TileWidth * (map.Width - 1),
                 map.TileWidth * (map.Height - 1));
             tiledEntity.AddComponent(new CameraBounds(topLeft, bottomRight));
-            #endregion Camera
 
             // create our Player and add a TiledMapMover to handle collisions with the tilemap
             var playerEntity = CreateEntity("player", new Vector2(spawnObject.X, spawnObject.Y));

@@ -44,9 +44,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Component\CameraBounds.cs" />
-    <Compile Include="Component\Test.cs" />
+    <Compile Include="Component\MenuItem.cs" />
     <Compile Include="Component\Player.cs" />
-    <Compile Include="Game1.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Factories\SceneFactory.cs" />
+    <Compile Include="Game.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="Manager\StateManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Scenes\BaseScene.cs" />
@@ -119,9 +123,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Managers\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Content\Assets\Player\Player.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
